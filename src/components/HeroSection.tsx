@@ -77,7 +77,7 @@ export default function HeroSection() {
                     Project status
                   </p>
                   <p className="mt-1 text-lg font-medium text-[#e8e0d0]">
-                    Website redesign
+                    API endpoints
                   </p>
                 </div>
                 <span className="rounded-full border border-[#f0a500]/40 bg-[#f0a500]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-[#ffcc44]">
