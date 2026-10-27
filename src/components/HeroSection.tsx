@@ -1,6 +1,4 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const workflowSteps = [
   {
@@ -26,7 +24,6 @@ const workflowSteps = [
 ];
 
 export default function HeroSection() {
-  const router = useRouter();
   return (
     <section className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-6 pb-12 pt-6 sm:px-10 sm:pb-16 lg:px-12">
       <div className="w-full overflow-hidden rounded-lg border border-[#f0a500]/20 bg-[#131210]/75 shadow-2xl shadow-black/40 backdrop-blur-2xl">
@@ -48,9 +45,9 @@ export default function HeroSection() {
             </p>
 
             <div className="mt-9 flex flex-wrap gap-4" id="get-started">
-              <button
+              <Link
                 className="group inline-flex items-center gap-3 rounded-sm bg-[#f0a500] px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#0a0a0a] transition-all hover:-translate-y-0.5 hover:bg-[#ffcc44] cursor-pointer"
-                onClick={() => router.push("/register-client")}
+                href="/register-client"
               >
                 Start as a client
                 <span
@@ -59,13 +56,13 @@ export default function HeroSection() {
                 >
                   →
                 </span>
-              </button>
-              <button
+              </Link>
+              <Link
                 className="inline-flex items-center rounded-sm border border-[#60594d] px-5 py-3 font-mono text-xs font-medium uppercase tracking-[0.12em] text-[#d4ccbc] transition-all hover:-translate-y-0.5 hover:border-[#f0a500] hover:text-[#f0a500] cursor-pointer"
-                onClick={() => router.push("/register-freelancer")}
+                href="/register-freelancer"
               >
                 Join as a freelancer
-              </button>
+              </Link>
             </div>
           </div>
 

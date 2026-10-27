@@ -51,8 +51,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Freelance Escrow",
-  description: "A clear workflow for freelance projects.",
+  metadataBase: new URL("https://freelance-frontend-sooty.vercel.app/"),
+  title: {
+    default: "Freelance Escrow",
+    template: "%s | Freelance Escrow",
+  },
+  description:
+    "A clear workflow for freelance projects, from agreeing on work to confirming completion.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
